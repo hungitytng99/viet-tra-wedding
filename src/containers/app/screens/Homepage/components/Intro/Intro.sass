@@ -1,0 +1,39 @@
+.intro
+    flex-direction: column
+    padding-bottom: 30px
+.intro__box
+    margin-top: 35px
+.intro__heart
+    width: 46px
+    transition: all 1s
+.intro__name
+    font-family: 'Dancing Script', cursive
+    font-weight: bold
+    font-size: 36px
+    &.boy
+        margin-right: 15px
+    &.girl
+        margin-left: 15px
+.intro__desc
+    position: relative
+    font-family: 'Comfortaa', cursive
+    color: #797979
+    font-size: 12px
+    margin-top: 10px
+    letter-spacing: 3px
+    &::before
+        content: ""
+        background: #ece9e9
+        width: 35px
+        height: 1px
+        position: absolute
+        left: -50px
+        top: 9px
+    &::after
+        content: ""
+        background: #ece9e9
+        width: 35px
+        height: 1px
+        position: absolute
+        right: -50px
+        top: 9px

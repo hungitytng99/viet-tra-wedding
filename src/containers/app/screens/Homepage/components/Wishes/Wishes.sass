@@ -1,0 +1,71 @@
+.wishes
+    background: url("../../../../../../assets/images/bg/bg.png")
+    height: 800px
+    flex-direction: column
+    &.active .wishes__container
+        animation: moveright 1s forwards
+        animation-delay: var(--delay)
+    &.active .wishes__calendar
+        animation: moveleft 1s forwards
+        animation-delay: var(--delay)
+    &.active .wishes__confirm
+        animation: moveup 1s forwards
+        animation-delay: var(--delay)
+    &__container
+        width: 480px
+        height: 496px
+        margin-right: 50px
+        background-color: #fff
+        border-radius: 1em
+        padding: 40px
+        position: relative
+        opacity: 0
+
+    &__box
+        border: 4px solid rgb(129 103 103 / 40%)
+        height: 100%
+        flex-direction: column
+        padding: 50px
+    &__people
+        font-weight: bold
+        font-size: 22px
+    &__desc
+        margin-top: 20px
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+    &__image
+        position: absolute
+        &.left
+            left: -100px
+            top: -100px
+            width: 200px
+        &.right
+            right: -90px
+            bottom: -70px
+            width: 300px
+    &__confirm
+        display: flex
+        justify-content: center
+        margin-top: 40px
+        opacity: 0
+    &__calendar
+        opacity: 0
+
+@keyframes heart_appear
+    0%
+        width: 0px
+    100%
+        width: 100px
+@media only screen and (max-width: 460px)
+.wishes
+    &__image
+        position: absolute
+        &.left
+            left: -100px
+            top: -100px
+            width: 200px
+        &.right
+            right: 0px
+            bottom: -70px
+            width: 300px

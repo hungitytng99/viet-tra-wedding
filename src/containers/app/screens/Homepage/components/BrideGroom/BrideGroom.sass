@@ -1,0 +1,44 @@
+.bridegroom
+    flex-direction: column
+    margin-top: 60px
+    &.active .bridegroom__item
+        animation: fadeIn 1s forwards
+        animation-delay: var(--delay)
+    &__title
+        font-weight: bold
+        font-size: 40px
+        font-family: "Dancing Script", cursive
+        margin-top: 8px
+    &__desc
+        font-size: 18px
+        width: 800px
+        text-align: center
+        margin-top: 6px
+    &__box
+        width: 900px
+        height: 900px
+        display: flex
+        flex-wrap: wrap
+        margin-top: 35px
+    &__item
+        width: 50%
+        height: 50%
+        overflow: hidden
+        opacity: 0
+        &-img
+            width: 100%
+            object-fit: contain
+        &.text
+            display: flex
+            justify-content: center
+            flex-direction: column
+            padding-left: 40px
+            font-family: "Dancing Script", cursive
+    &__bridge
+        font-size: 24px
+        &-name
+            font-weight: bold
+            font-size: 40px
+        &-born
+            letter-spacing: 4px
+            margin-top: 6px

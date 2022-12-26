@@ -1,0 +1,55 @@
+.calendar
+    padding: 40px
+    background-color: #fff
+    border-radius: 1em
+table
+    border-collapse: collapse
+    border-spacing: 0
+td
+    padding: 0
+.calendar-container
+    position: relative
+    width: 400px
+    header
+        background: #ac6867
+        color: #fff
+        padding: 25px 20px
+
+.day
+    font-size: 54px
+    font-weight: 900
+    line-height: 1em
+    &:hover
+        cursor: default
+.month
+    font-size: 36px
+    line-height: 1em
+    &:hover
+        cursor: default
+.calendar__table
+    background: #fff
+    color: #555
+    padding: 2em
+    width: 400px
+    flex-direction: column
+    border: 4px solid rgb(129 103 103 / 40%)
+    border-top: none
+    thead
+        color: #e66b6b
+        font-weight: 700
+        text-transform: uppercase
+        &:hover
+            cursor: default
+    td
+        padding: .5em 1em
+        text-align: center
+    tbody
+        td
+            &:hover
+                cursor: default
+.current-day
+    color: #e66b6b
+    background: #e7e7e7
+.prev-month,
+.next-month
+    color: #cacaca

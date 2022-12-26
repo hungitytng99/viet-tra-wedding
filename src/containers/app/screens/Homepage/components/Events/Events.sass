@@ -1,0 +1,79 @@
+.events
+    position: relative
+    &.active .events__content-item.left
+        animation: movedown 1s forwards
+        animation-delay: var(--delay)
+    &.active .events__content-item
+        animation: moveup 1s forwards
+        animation-delay: var(--delay)
+    &__cover
+        height: 800px
+        overflow: hidden
+        background-color: #F2EDED
+        &-img
+            width: 100%
+    &__content
+        position: absolute
+        top: 100px
+        left: 50%
+        transform: translateX(-50%)
+        &-title
+            font-family: "Dancing Script", cursive
+            color: #fff
+            font-weight: bold
+            font-size: 60px
+            text-align: center
+        &-desc
+            color: #fff
+            font-weight: 600
+            font-size: 16px
+            text-align: center
+        &-box
+            position: absolute
+            bottom: -219px
+            left: 50%
+            transform: translateX(-50%)
+            width: 560px
+
+        &-item
+            padding: 20px 30px
+            background: url("../../../../../../assets/images/bg/bg.png")
+            opacity: 0
+            &.left
+                margin-right: 40px
+                padding-bottom: 45px
+            &-box
+                width: 100%
+                aspect-ratio: 1 / 1
+                overflow: hidden
+            &-img
+                width: 100%
+            &-date
+                font-weight: 800
+                margin-top: 15px
+                margin-bottom: 10px
+                text-align: center
+                font-size: 16px
+            &-addr
+                text-align: center
+                font-size: 15px
+            &-title
+                font-size: 20px
+                font-weight: bold
+                text-align: center
+                margin-bottom: 26px
+                text-transform: uppercase
+                position: relative
+                &::before
+                    content: ""
+                    background: #c89d9c
+                    width: 120px
+                    height: 2px
+                    position: absolute
+                    left: 50%
+                    -webkit-transform: translateX(-50%)
+                    -moz-transform: translateX(-50%)
+                    -o-transform: translateX(-50%)
+                    -ms-transform: translateX(-50%)
+                    transform: translateX(-50%)
+                    bottom: -8px

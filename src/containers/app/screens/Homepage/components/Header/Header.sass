@@ -1,0 +1,35 @@
+.header
+    border-top: 1px solid #ece9e9
+    border-bottom: 1px solid #ece9e9
+    position: sticky
+    top: 0
+    left: 0
+    right: 0
+    z-index: 100
+    background-color: #fff
+    &__item
+        padding: 20px 21px
+        margin: 0px 4px
+        font-weight: bold
+        font-size: 16px
+        position: relative
+        margin-bottom: 5px
+        color: #000
+        &:hover
+            cursor: pointer
+            color: #c89d9c
+            &::after
+                width: 100%
+        &.active
+            color: #c89d9c
+            &::after
+                width: 100%
+        &::after
+            position: absolute
+            content: ""
+            height: 2px
+            width: 0%
+            background: #c89d9c
+            left: 0
+            bottom: 0
+            transition: all .4s

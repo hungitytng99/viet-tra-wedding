@@ -1,0 +1,29 @@
+.app
+    &-heart
+        position: absolute
+        top: -13px
+        right: -13px
+        transition: all 0.5s
+        opacity: 0
+        width: 20px
+    &-button
+        padding: 10px 15px
+        border: 2px solid #ac6867
+        position: relative
+        transition: outline-offset 200ms ease
+        background-color: transparent
+        &:hover
+            cursor: pointer
+            border: 2px solid #ac6867
+            outline: 2px solid #ac6867
+            outline-offset: 1px
+            & > .app-heart
+                opacity: 1
+            & > span
+                color: #ac6867
+            & > svg
+                filter: invert(45%) sepia(32%) saturate(533%) hue-rotate(314deg) brightness(98%) contrast(93%)
+        & span
+            color: #ac6867
+            margin-left: 6px
+            font-weight: 700
