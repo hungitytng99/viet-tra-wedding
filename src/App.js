@@ -41,6 +41,15 @@ function App() {
         }
     }, [notify.requestState]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            document.title = 'Nhớ đến tham dự nha';
+        }, 5000);
+        setTimeout(() => {
+            document.title = 'Hoàng Việt - Linh Trà';
+        }, 10000);
+    }, []);
+
     return (
         <ConnectedRouter history={history}>
             <Suspense fallback={<FullPageLoading />}>
