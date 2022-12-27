@@ -1,12 +1,17 @@
 import { useRef } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import useIsInViewport from '~/hooks/useIsInViewPort';
-import TQA06881 from '~/assets/images/wedding/TQA06881.jpg';
-import TQA06736 from '~/assets/images/wedding/TQA06736.jpg';
 import TQA06583 from '~/assets/images/wedding/TQA06583.jpg';
+import TQA06736 from '~/assets/images/wedding/TQA06736.jpg';
+import TQA06881 from '~/assets/images/wedding/TQA06881.jpg';
+import AppButton from '~/components/atomic/AppButton';
+import useIsInViewport from '~/hooks/useIsInViewPort';
 import './Events.sass';
-
+const render = (status) => {
+    return <h1>{status}</h1>;
+};
 function Events({ name }) {
+    const groomMap = useRef(null);
+    const bridgeMap = useRef(null);
     const viewRef = useRef(null);
     const isInViewPort = useIsInViewport(viewRef, true);
     return (
@@ -34,7 +39,26 @@ function Events({ name }) {
                     </div>
                     <div className="events__content-item-date">09:30 AM 18/02/2023</div>
                     <div className="events__content-item-addr">
-                        Xóm 10, thông Phương Khê, xã Phú Phương, huyện Ba Vì, TP Hà Nội
+                        Xóm 10, thôn Phương Khê, xã Phú Phương, huyện Ba Vì, TP Hà Nội
+                    </div>
+                    <a
+                        ref={bridgeMap}
+                        style={{ display: 'none' }}
+                        href="https://goo.gl/maps/a64B51uMaEfrexeH7"
+                        target={'_blank'}
+                    ></a>
+                    <div
+                        className="flex-center"
+                        style={{
+                            marginTop: '35px',
+                        }}
+                    >
+                        <AppButton
+                            title="Xem trên bản đồ"
+                            onClick={() => {
+                                bridgeMap.current.click();
+                            }}
+                        ></AppButton>
                     </div>
                 </div>
                 <div ref={viewRef}></div>
@@ -50,7 +74,26 @@ function Events({ name }) {
                     </div>
                     <div className="events__content-item-date">11:00 AM 18/02/2023</div>
                     <div className="events__content-item-addr">
-                        Thôn Đông Đoài, xã phú đông, huyện Ba Vì, TP Hà Nội (cạnh Ủy Ban xã Phú Đông)
+                        Thôn Đông Đoài, xã Phú Đông, huyện Ba Vì, TP Hà Nội (cạnh Ủy Ban xã Phú Đông)
+                    </div>
+                    <a
+                        ref={groomMap}
+                        style={{ display: 'none' }}
+                        href="https://goo.gl/maps/a64B51uMaEfrexeH7"
+                        target={'_blank'}
+                    ></a>
+                    <div
+                        className="flex-center"
+                        style={{
+                            marginTop: '10px',
+                        }}
+                    >
+                        <AppButton
+                            title="Xem trên bản đồ"
+                            onClick={() => {
+                                groomMap.current.click();
+                            }}
+                        ></AppButton>
                     </div>
                 </div>
             </div>
