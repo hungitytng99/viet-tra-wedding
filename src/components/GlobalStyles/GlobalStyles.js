@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './GlobalStyles.sass';
+import './_mixin.sass';
 
 function GlobalStyles({ children }) {
     return children;

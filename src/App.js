@@ -12,10 +12,8 @@ import { useDispatch } from 'react-redux';
 import { RESET_NOTIFY_STATE } from '~/redux/actions/notify';
 import { REQUEST_STATE } from '~/app-configs';
 import AppLayout from '~/components/Layout/AppLayout/AppLayout';
-import AuthLayout from '~/components/Layout/AuthLayout/AuthLayout';
 import 'antd/dist/antd.css';
 import FullPageLoading from './components/Loading/FullPageLoading';
-
 console.debug('listAppRoutes =>', listAppRoutes);
 console.debug('listAuthenticationRoutes =>', listAuthenticationRoutes);
 
@@ -48,6 +46,24 @@ function App() {
         setTimeout(() => {
             document.title = 'Hoàng Việt - Linh Trà';
         }, 10000);
+    }, []);
+
+    useEffect(() => {
+        function createHeart() {
+            const heart = document.createElement('img');
+            heart.src="https://res.cloudinary.com/dzhowprbg/image/upload/v1672117186/heart_pfttiz.png";
+            heart.classList.add('heart');
+
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 8 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        setInterval(createHeart, 2000);
     }, []);
 
     return (

@@ -78,6 +78,20 @@ iframe
     & div:nth-child(2)
         color: #03a9f4
         animation: animate 4s ease-in-out infinite
+.heart
+    position: fixed
+    font-size: 1.5rem
+    top: -1vh
+    transform: translateY(0)
+    animation: fall 3s linear forwards
+    z-index: 10
+    width: 26px
+@keyframes fall
+    from
+        transform: translateY(0vh) translateX(-10vw)
+
+    to
+        transform: translateY(105vh) translateX(10vw)
 
 @keyframes animate
     0%,

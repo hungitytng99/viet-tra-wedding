@@ -11,7 +11,7 @@ function BrideGroom({ name }) {
     return (
         <div name={name} className={`bridegroom flex-center ${isInViewPort && 'active'}`}>
             <img src={SecTitleFlower}></img>
-            <div className="bridegroom__title">Cô dâu & Chủ rể</div>
+            <div className="bridegroom__title">Cô dâu & Chú rể</div>
             <div className="bridegroom__desc">
                 Tình yêu là điều kiện trong đó hạnh phúc của người khác là điều cần thiết cho chính bạn.
             </div>

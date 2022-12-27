@@ -1,3 +1,4 @@
+@import '../../../../../../components/GlobalStyles/_mixin'
 .events
     position: relative
     &.active .events__content-item.left
@@ -17,6 +18,8 @@
         top: 100px
         left: 50%
         transform: translateX(-50%)
+        @include Responsive(XXL)
+            top: 0px
         &-title
             font-family: "Dancing Script", cursive
             color: #fff
@@ -25,8 +28,8 @@
             text-align: center
         &-desc
             color: #fff
-            font-weight: 600
-            font-size: 16px
+            font-weight: bold
+            font-size: 18px
             text-align: center
         &-box
             position: absolute
