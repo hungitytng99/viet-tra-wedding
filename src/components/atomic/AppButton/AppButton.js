@@ -12,7 +12,7 @@ function AppButton({ children, title = 'Xác nhận tham dự', onClick = () => 
                 <>
                     {confirmJoinSvg}
                     <span>{title}</span>
-                    <img src={HeartIcon} className="app-heart"></img>)
+                    <img src={HeartIcon} className="app-heart"></img>
                 </>
             )}
         </button>
