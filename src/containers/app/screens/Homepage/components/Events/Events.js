@@ -6,9 +6,6 @@ import TQA06881 from '~/assets/images/wedding/TQA06881.jpg';
 import AppButton from '~/components/atomic/AppButton';
 import useIsInViewport from '~/hooks/useIsInViewPort';
 import './Events.sass';
-const render = (status) => {
-    return <h1>{status}</h1>;
-};
 function Events({ name }) {
     const groomMap = useRef(null);
     const bridgeMap = useRef(null);
@@ -33,7 +30,7 @@ function Events({ name }) {
                         '--delay': '0s',
                     }}
                 >
-                    <div className="events__content-item-title">Lễ cưới nhà nữ</div>
+                    <div className="events__content-item-title">Lễ cưới nhà gái</div>
                     <div className="events__content-item-box">
                         <img className="events__content-item-img" src={TQA06736} alt="" />
                     </div>
@@ -68,13 +65,13 @@ function Events({ name }) {
                         '--delay': '0s',
                     }}
                 >
-                    <div className="events__content-item-title">Lễ cưới nhà nam</div>
+                    <div className="events__content-item-title">Lễ cưới nhà trai</div>
                     <div className="events__content-item-box">
                         <img className="events__content-item-img" src={TQA06583} alt="" />
                     </div>
                     <div className="events__content-item-date">11:00 AM 18/02/2023</div>
                     <div className="events__content-item-addr">
-                        Thôn Đông Đoài, xã Phú Đông, huyện Ba Vì, TP Hà Nội (cạnh Ủy Ban xã Phú Đông)
+                        Xóm Đông Đoài, xã Phú Đông, huyện Ba Vì, TP Hà Nội (cạnh UBND xã Phú Đông)
                     </div>
                     <a
                         ref={groomMap}

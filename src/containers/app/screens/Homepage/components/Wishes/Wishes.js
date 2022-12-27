@@ -1,12 +1,11 @@
-import { Divider } from 'antd';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import InvitationLeft from '~/assets/images/bg/invitation-left-img.png';
 import InvitationRight from '~/assets/images/bg/invitation-right-image.png';
-import { confirmJoinSvg } from '~/assets/images/svg';
-import Calendar from '../Calendar';
-import './Wishes.sass';
 import AppButton from '~/components/atomic/AppButton';
 import useIsInViewport from '~/hooks/useIsInViewPort';
+import Calendar from '../Calendar';
+import HeartIcon from '~/assets/images/header/heart.png';
+import './Wishes.sass';
 
 function Wishes(props) {
     const viewRef = useRef(null);
@@ -21,7 +20,17 @@ function Wishes(props) {
                     }}
                 >
                     <div className="wishes__box flex-center">
-                        <div className="wishes__people">Hoàng Việt & Linh Trà</div>
+                        <div className="wishes__people">
+                            Hoàng Việt{'  '}
+                            <img
+                                src={HeartIcon}
+                                style={{
+                                    width: '38px',
+                                }}
+                                className="banner__heart"
+                            ></img>{'  '}
+                            Linh Trà
+                        </div>
                         <div className="wishes__desc">
                             Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng tôi có thêm một niềm hạnh phúc!
                             <div ref={viewRef}></div>
