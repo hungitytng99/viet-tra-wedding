@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import TQA06583 from '~/assets/images/wedding/TQA06583.jpg';
-import TQA06736 from '~/assets/images/wedding/TQA06736.jpg';
-import TQA06881 from '~/assets/images/wedding/TQA06881.jpg';
+import TQA06963 from '~/assets/images/wedding/TQA06963.jpg';
+import TQA06684 from '~/assets/images/wedding/TQA06684.jpg';
+import TQA07019 from '~/assets/images/wedding/TQA07019.jpg';
 import AppButton from '~/components/atomic/AppButton';
 import useIsInViewport from '~/hooks/useIsInViewPort';
 import './Events.sass';
@@ -14,7 +14,7 @@ function Events({ name }) {
     return (
         <div name={name} className={`events ${isInViewPort && 'active'}`}>
             <div className="events__cover">
-                <img className="events__cover-img" src={TQA06881} />
+                <img className="events__cover-img" src={TQA07019} />
             </div>
             <div className="events__content">
                 <div className="events__content-title">Sự Kiện Cưới</div>
@@ -32,7 +32,7 @@ function Events({ name }) {
                 >
                     <div className="events__content-item-title">Lễ cưới nhà gái</div>
                     <div className="events__content-item-box">
-                        <img className="events__content-item-img" src={TQA06736} alt="" />
+                        <img className="events__content-item-img" src={TQA06684} alt="" />
                     </div>
                     <div className="events__content-item-date">09:30 AM 18/02/2023</div>
                     <div className="events__content-item-addr">
@@ -67,7 +67,7 @@ function Events({ name }) {
                 >
                     <div className="events__content-item-title">Lễ cưới nhà trai</div>
                     <div className="events__content-item-box">
-                        <img className="events__content-item-img" src={TQA06583} alt="" />
+                        <img className="events__content-item-img" src={TQA06963} alt="" />
                     </div>
                     <div className="events__content-item-date">11:00 AM 18/02/2023</div>
                     <div className="events__content-item-addr">

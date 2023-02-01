@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import TQA06851 from '~/assets/images/wedding/TQA06851.jpg';
+import TQA07046 from '~/assets/images/wedding/TQA07046.jpg';
 import TQA06853 from '~/assets/images/wedding/TQA06853.jpg';
 import TQA06863 from '~/assets/images/wedding/TQA06863.jpg';
 import HeartIcon from '~/assets/images/header/heart.png';
@@ -16,7 +16,7 @@ function Banner({ name }) {
             <div ref={bannerRef}></div>
             <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} showStatus={false}>
                 <div className="banner__image flex-center">
-                    <img src={TQA06851} />
+                    <img src={TQA07046}/>
                 </div>
                 <div className="banner__image flex-center">
                     <img src={TQA06853} />
