@@ -6,6 +6,7 @@ import useIsInViewport from '~/hooks/useIsInViewPort';
 import Calendar from '../Calendar';
 import HeartIcon from '~/assets/images/header/heart.png';
 import './Wishes.sass';
+import { Link } from 'react-router-dom';
 
 function Wishes(props) {
     const viewRef = useRef(null);
@@ -28,7 +29,8 @@ function Wishes(props) {
                                     width: '38px',
                                 }}
                                 className="banner__heart"
-                            ></img>{'  '}
+                            ></img>
+                            {'  '}
                             Linh Trà
                         </div>
                         <div className="wishes__desc">
@@ -56,7 +58,20 @@ function Wishes(props) {
                     '--delay': '1.6s',
                 }}
             >
-                <AppButton></AppButton>
+                <AppButton>
+                    <Link
+                        to={{
+                            pathname:
+                                'https://docs.google.com/forms/d/e/1FAIpQLSdzUSDr8gXJTA9cqTrsSlnt_mtzkrMp5ye0E-R5a0uafbjk8Q/viewform?fbclid=IwAR29DLENOc9qcyFCJudoOsxVJ8ITXlEn7NNdfHcOOeT-0pFgDLEUaC0dwA4',
+                        }}
+                        target="_blank"
+                        style={{
+                            color: '#ac6867',
+                        }}
+                    >
+                        Xác nhận tham dự
+                    </Link>
+                </AppButton>
             </div>
         </div>
     );
